@@ -1,0 +1,50 @@
+
+			Laboratorio di Sistemi Informativi
+----------------------------------------------------------------------------------------------------------------------------
+	Autore: Bajron Ismailaj
+	Email: caiupi@yahoo.it
+	Matricola: 2686563	
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Questo progetto è stato realizzato su un sistema Windows Vista. Per lo sviluppo si è utilizzato MySQL QUERY BROWSER e  
+MS-DOS basato su un server MySQL 5.5. Considerando il fatto che per lo sviluppo del database si e usato le nuove funzionalità 
+quali; viste, procedure e trigger si deve usare un server MySQL 5.0 o superiore per l'esecuzione.
+Il progetto contiene i seguenti file dove nella cartella principale abbiamo:
+
+---->>>	File: TuttoPalestra.sql  <<<----: Contiene l'implementazione fisica del database insieme con i
+ 	 			          trigger, procedure e i dati per il popolamento del database in un unico file. Cioè tutti i
+ 					  file raggruppati in un unico file per una esecuzione veloce. Inoltre in questo file si 		
+					  trovano anche i commenti per una lettura più comprensibili
+---->>>	File: PalestraRelazione.pdl <<<----: Contiene la relazione del progetto in formato pdf.  
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+		 1.1  Cartella sorgenti			
+
+In questa cartella si trovano i vari script per l'implementazione del database
+	Cartella: Separati  : Contiene i singoli file che hanno formato tuttoPalestra.sql, come:
+PalestraDati.sql : Contiene i dati per il popolamento del database.
+Palestra.sql: Contiene  l'implementazione fisica del database senza trigger, procedure e dati.
+Più gli altri file che contengono le procedure e i trigger, ognuno in un file a parte.
+
+----------------------------------------------------------------------------------------------------------------------------
+			
+		 1.2  Cartella documenti
+
+
+La cartella documenti contiene i seguenti file prodotti con JDR e con i rispettivi JPG :
+
+1. Iniziale.er    #Primo schema scheletro: Fase concettuale
+2. Persona.er    #Rappresenta il concetto Persona : Fase concettuale
+3. Corso.er       #Concetto Corso: Fase concettuale
+4. Impianto.er  #Concetto Impianto : Fase concettuale
+5. Palestra.er    #Prodotto finale : Fase Concettuale
+6. Normalizzato.er  #Lo schema normalizzato : Fase Logica
+
+Inoltre in questa cartella troviamo anche il file palestra.odt che è la sorgente della relazione sviluppato in OpenOffice. 
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
