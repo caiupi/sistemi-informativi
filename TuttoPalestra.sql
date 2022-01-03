@@ -40,7 +40,7 @@ foreign key (codicePersonale) references personale(codiceFiscale) on delete casc
 drop table if exists impianto;
 /*La tabella contiene i dati relativi al impianto, aree sale della palestra*/
 create table impianto(
-nome char(16) primary key, #L'attributo nome identifica in modo univoco ogni istanza del impianto
+nome char(16) primary key, #L attributo nome identifica in modo univoco ogni istanza del impianto
 descrizione varchar(32) #Descrizione breve del impianto
 ) ENGINE=INNODB;
 
@@ -85,7 +85,7 @@ medico char(16), #Ogni iscritto deve fare una visita e il database tiene tracia 
 dataCert date,   #Data del rilascio del certificato
 indirizzo varchar(32),
 tel char(16),
-dataIscrizione date    #La data d'iscrizione nella palestra
+dataIscrizione date    #La data d iscrizione nella palestra
 ) ENGINE=INNODB;
 
 drop table if exists abbonato;
@@ -179,7 +179,7 @@ BEFORE insert ON abbonato
 FOR EACH ROW
 BEGIN
 IF NEW.datainizio > NEW.datafine THEN
-SET NEW.datafine = NEW.datainizio; #La data d'inizio abbonamento deve essere minore della data fine abbonamento
+SET NEW.datafine = NEW.datainizio; #La data d inizio abbonamento deve essere minore della data fine abbonamento
 END IF;
 IF NEW.costo < 1 THEN
 SET NEW.costo = 1; #Il costo di un abbonamento non puù essere minore di 1
@@ -260,7 +260,7 @@ CREATE PROCEDURE `stampaPartecipanti`(IN corso char(16) )
 BEGIN
 select corso.nome as NomeCorso, personale.nome as NomeIstruttore, personale.cognome as CognomeIstruttore, personale.codiceFiscale,
  corso.MinIscritto as MinimoIscrittiCorso, corso.maxIscritto as MassimoIscrittiCorso
-  from personale, corso  #Stampa l'istruttore del corso
+  from personale, corso  #Stampa l istruttore del corso
 where corso.nome = corso and corso.istruttore = personale.codiceFiscale;
 select iscritto.matricola, iscritto.Nome, iscritto.cognome, iscritto.codicefiscale, iscritto.tel
  from partecipa, iscritto  #Stampa i partecipanti del corso
